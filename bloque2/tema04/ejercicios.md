@@ -17,7 +17,7 @@ Para cada una de las siguientes situaciones, indica qué tipo de cardinalidad (1
 
 ### Ejercicio 2 — Academia de cursos
 
-A partir del siguiente enunciado, identifica entidades, atributos y relaciones (todavía sin dibujar el diagrama):
+A partir del siguiente enunciado, identifica entidades, atributos y relaciones:
 
 > Una academia quiere gestionar sus cursos. Cada curso tiene un código, un nombre y una duración en horas. Cada curso lo imparte un único profesor, aunque un profesor puede impartir varios cursos. Los alumnos se matriculan en los cursos: un alumno puede matricularse en varios cursos, y un curso puede tener varios alumnos matriculados. De cada alumno se guarda el DNI, nombre y teléfono. De cada profesor se guarda el DNI, nombre y especialidad.
 
