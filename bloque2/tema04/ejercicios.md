@@ -51,3 +51,17 @@ A partir del siguiente enunciado se desea realizar el modelo entidad-relación.
 >
 > - El concesionario también se encarga de llevar a cabo las revisiones que se realizan a cada coche. Cada revisión tiene asociado un código que se incrementa automáticamente por cada revisión que se haga. De cada revisión se desea saber si se ha hecho cambio de filtro, si se ha hecho cambio de aceite, si se ha hecho cambio de frenos u otros. Los coches pueden pasar varias revisiones en el concesionario.
 
+
+---
+
+### Ejercicio 6 — Clasifica el tipo de atributo
+
+Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado, multivaluado o compuesto):
+
+1. El DNI de un cliente.
+2. La edad de un empleado, calculada a partir de su fecha de nacimiento.
+3. Los distintos números de teléfono de un proveedor (fijo y móvil).
+4. La dirección de un cliente (calle, número, ciudad).
+5. El nombre de un producto.
+6. El e-mail de un cliente puede ser un dato que tengan o quizás no tengan e-mail.
+
