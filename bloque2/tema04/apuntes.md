@@ -35,8 +35,8 @@ en una biblioteca          almacenar de ella              representarlo
 
 | Concepto | Definición |
 |----------|-----------|
-| **Modelo de datos** | Conjunto de herramientas conceptuales para describir la información: su estructura, sus operaciones y sus restricciones |
-| **Esquema** | Aplicación concreta de un modelo de datos a un mini-mundo específico. El conjunto de datos representado por el esquema es lo que constituye la base de datos |
+| **Modelo de datos** |  Herramienta conceptual para representar información. |
+| **Esquema** | Aplicación del modelo de datos a un caso concreto |
 
 > 💡 **Recuerda:** en el Tema 3 hablamos del modelo de datos como la estructura interna de la BD (relacional, jerárquico...). Aquí lo usamos en un sentido más amplio, como herramienta de diseño. No son contradictorios — son dos capas distintas.
 
