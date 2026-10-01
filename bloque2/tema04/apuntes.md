@@ -20,6 +20,10 @@ Las bases de datos están en todas partes, aunque no lo notemos: en las apps del
 
 > 💡 El modelo de datos actúa como un mapa: organiza qué información queremos guardar antes de tocar una sola línea de SQL. En este tema veremos el más usado de todos para la fase de diseño: el **modelo entidad-relación (E/R)**.
 
+El modelo **Entidad/Relación (E/R)** permite representar visualmente la realidad que queremos almacenar en una **base de datos**, identificando **entidades, atributos y relaciones** entre los datos.
+
+👉 Es la **fase de diseño conceptual**, donde se definen los elementos clave sin depender del SGBD.
+
 ---
 
 ## 2. Modelo de datos vs. esquema
@@ -38,7 +42,11 @@ en una biblioteca          almacenar de ella              representarlo
 | **Modelo de datos** |  Herramienta conceptual para representar información. |
 | **Esquema** | Aplicación del modelo de datos a un caso concreto |
 
-> 💡 **Recuerda:** en el Tema 3 hablamos del modelo de datos como la estructura interna de la BD (relacional, jerárquico...). Aquí lo usamos en un sentido más amplio, como herramienta de diseño. No son contradictorios — son dos capas distintas.
+
+Un **modelo de datos** es un conjunto de herramientas conceptuales que permiten describir la información y su estructura. Se compone de:
+- **Estructura:** tipos de datos y relaciones.
+- **Operaciones:** acciones que pueden realizarse.
+- **Restricciones:** condiciones que aseguran la validez de los datos.
 
 Para definir estructura, operaciones y restricciones nos apoyamos en dos sublenguajes SQL ya conocidos:
 
@@ -51,30 +59,11 @@ Para definir estructura, operaciones y restricciones nos apoyamos en dos subleng
 
 ### 2.1 Tipos de modelos
 
-Podemos clasificar los modelos de datos según su nivel de abstracción:
-
-```
-MODELOS DE DATOS
-      │
-      ├── Externo   → punto de vista de cada usuario
-      ├── Global    → punto de vista de todos los usuarios
-      └── Interno   → punto de vista de la máquina
-```
-
-Externo y Global se agrupan como **modelos lógicos**; Interno equivale al **modelo físico**.
-
-Los modelos lógicos, a su vez, se dividen en:
-
-- **Conceptuales** — describen el mundo real sin considerar la tecnología (redes, sistemas operativos...). Ejemplos: el modelo E/R y UML.
-- **Convencionales** — orientados a la implementación en un SGBD concreto. Ejemplos: jerárquico, en red, relacional.
-
-| Modelo conceptual | Modelo convencional |
-|---|---|
-| No depende del SGBD | Depende fuertemente del SGBD |
-| Mayor nivel de abstracción | Más próximo al hardware |
-| Mayor capacidad semántica | Capacidad semántica reducida |
-| Orientado al diseño de alto nivel | Orientado a la implementación técnica |
-| Interfaz usuario/informático | Interfaz informático/sistema |
+| Tipo | Descripción | Ejemplo |
+|------|--------------|---------|
+| **Conceptual** | Representa la realidad sin depender del SGBD. | Modelo E/R |
+| **Convencional (Lógico)** | Prepara los datos para implementarlos en un SGBD. | Modelo relacional |
+| **Físico** | Define cómo se almacenan realmente los datos. | Archivos, índices |
 
 ---
 
@@ -98,7 +87,7 @@ OBTENCIÓN Y ANÁLISIS DE REQUISITOS
 | Fase | Qué se hace |
 |------|-------------|
 | **Análisis de requisitos** | Se identifica qué datos hay que almacenar, quién los usará y para qué |
-| **Diseño conceptual** | Se elabora el esquema E/R a partir de los requisitos. **Es el foco de este tema** |
+| **Diseño conceptual** | Se elabora el esquema E/R a partir de los requisitos. **Es el foco de este tema**. Se elabora el **modelo E/R** |
 | **Diseño lógico** | Se elige el SGBD y el modelo (relacional, orientado a objetos...) y se traduce el esquema conceptual a él |
 | **Diseño físico** | Se implementa en el SGBD, decidiendo almacenamiento y arquitectura hardware |
 
@@ -109,8 +98,6 @@ OBTENCIÓN Y ANÁLISIS DE REQUISITOS
 El modelo E/R es la herramienta que usamos en la fase de **diseño conceptual**: permite representar de forma clara qué datos queremos guardar y cómo se relacionan entre sí, sin pensar todavía en tablas ni en SQL.
 
 Lo creó **Peter P. Chen** en la década de los 70, con la finalidad de establecer un modelo que unificara la representación de los datos del mundo real de forma coherente y estructurada.
-
-> 💡 **Curiosidad:** Chen se inspiró en la biología — en cómo se relacionan las células — para diseñar la notación gráfica del modelo E/R.
 
 Aunque su nombre pueda sugerir que sirve solo para bases de datos relacionales, en realidad es **adaptable a casi cualquier arquitectura de base de datos**.
 
@@ -190,6 +177,8 @@ Se representan con una **elipse** conectada a su entidad o relación mediante un
 | **Compuesto** | Se puede descomponer en atributos más específicos (ej: dirección → calle, número, ciudad) | Elipse "ramificada" |
 
 También se distingue entre atributos **obligatorios** (siempre deben tener valor) y **opcionales** (pueden no tenerlo).
+
+![alt text](img/atributos-tipos.png)
 
 ---
 
