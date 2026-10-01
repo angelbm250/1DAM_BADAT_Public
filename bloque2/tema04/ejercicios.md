@@ -70,13 +70,12 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 
 ### Ejercicio 7 — Mentor (tiene reflexiva)
 
-A continuación se expondrán los requisitos que se van a considerar en este apartado para llevar a cabo el diseño de la base de datos. 
-
-La información que se desea almacenar en la Base de Datos se refiere a los alumnos matriculados en cada curso, teniendo en cuenta la fecha de inicio y fecha de finalización de cada alumno en un determinado curso y sabiendo que un alumno se ha podido matricular de uno o varios cursos y que un curso tiene como mínimo a un alumno.
-De los alumnos se desea saber el nombre completo, dirección, teléfono, nacionalidad y la dirección de correo electrónico.
-La dirección de correo electrónico es imprescindible para poder realizar los cursos y además es única para cada alumno. 
-La información referente a los cursos consta del nombre, título del libro de consulta (hay cursos que no utilizan ningún libro de referencia) y dirección de internet donde se encuentra todo el material que se puede utilizar durante el curso.
-Cada curso tiene asociado un tutor, la información que se quiere almacenar en la BD acerca de los tutores es la siguiente: DNI, nombre completo, dirección de correo electrónico. No hay que olvidar que un tutor tutoriza varios cursos y que además un curso puede tener más de un tutor (como pasa en 1er de DAM)
-Un tutor coordina a varios tutores(como mínimo a uno) y un tutor es coordinado por otro tutor.**(Reflexiva)**
-El proyecto MENTOR, además tiene en cuenta que ha de facilitar a los alumnos el acceso a Internet y por lo tanto ha instalado aulas con todos los servicios necesarios para el pleno desarrollo de los cursos. Cada alumno pertenece únicamente a un aula, pueden haber aulas vacías.
-El mantenimiento tanto de los ordenadores como de los programas (es decir, de las aulas) se lleva a cabo por los administradores de aula. Cada aula tiene asignado un código único, un nombre y dirección. La información que se necesita de cada administrador es su DNI, nombre completo, dirección de correo electrónico. Cada aula es administrada por un único administrador y estos pueden administrar varias aulas o ninguna.
+> A continuación se expondrán los requisitos que se van a considerar en este apartado para llevar a cabo el diseño de la base de datos. 
+>
+> - La información que se desea almacenar en la Base de Datos se refiere a los alumnos matriculados en cada curso, teniendo en cuenta la fecha de inicio y fecha de finalización de cada alumno en un determinado curso y sabiendo que un alumno se ha podido matricular de uno o varios cursos y que un curso tiene como mínimo a un alumno.
+> - De los alumnos se desea saber el nombre completo, dirección, teléfono, nacionalidad y la dirección de correo electrónico. La dirección de correo electrónico es imprescindible para poder realizar los cursos y además es única para cada alumno. 
+> - La información referente a los cursos consta del nombre, título del libro de consulta (hay cursos que no utilizan ningún libro de referencia) y url de internet donde se encuentra todo el material que se puede utilizar durante el curso.
+> - Cada curso tiene asociado un tutor, la información que se quiere almacenar en la BD acerca de los tutores es la siguiente: DNI, nombre completo, dirección de correo electrónico (puede tener varias). No hay que olvidar que un tutor tutoriza varios cursos y que además un curso puede tener más de un tutor (como pasa en 1er de DAM)
+> - **(Reflexiva)**: Un tutor coordina a varios tutores(como mínimo a uno) y un tutor es coordinado por otro tutor.
+> - El proyecto MENTOR, además tiene en cuenta que ha de facilitar a los alumnos el acceso a Internet y por lo tanto ha instalado aulas con todos los servicios necesarios para el pleno desarrollo de los cursos. Cada alumno pertenece únicamente a un aula, pueden haber aulas vacías sin alumnos asignados.
+> - El mantenimiento de las aulas se lleva a cabo por los administradores de aula. Cada aula tiene asignado un código único, un nombre y dirección. La información que se necesita de cada administrador es su DNI, nombre completo, dirección de correo electrónico (si tiene). Cada aula es administrada por un único administrador y estos pueden administrar varias aulas o ninguna.
