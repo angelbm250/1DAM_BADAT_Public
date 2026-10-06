@@ -117,12 +117,8 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 >
 > - De los alumnos se guarda un identificador único, NIF, nombre, apellidos, fecha de nacimiento y el grupo al que asisten a clase. Se guarda también un teléfono de contacto, opcional (hay alumnos que no lo han facilitado). Interesa además conocer la edad de cada alumno, que se calcula a partir de su fecha de nacimiento.
 > - Los alumnos realizan dos tipos de pruebas a lo largo del curso:
-> - Exámenes teóricos. Se definen por un identificador único, un título, el número de preguntas y la fecha de realización, que es la misma para todos los alumnos que hacen el mismo examen. Cada alumno realiza varios exámenes (al menos uno) y hay que guardar la nota de cada alumno en cada examen. Puede haber exámenes creados que todavía no ha realizado ningún alumno.
-> - Prácticas. Se realiza un número indeterminado de prácticas durante el curso. Se definen por un identificador, un título y el grado de dificultad (Baja, Media o Alta). Los alumnos pueden examinarse de cualquier práctica cuando lo deseen, como mucho una vez cada una, y se guarda la fecha y la nota obtenida. Un alumno puede no haber hecho ninguna práctica, y puede haber prácticas que nadie ha hecho aún.
-> - De los profesores se guarda un identificador, NIF, nombre y apellidos.
-> - Interesa saber qué profesor o profesores han participado en el diseño de una práctica.
-> - En el diseño de una práctica colabora al menos un profesor, y puede colaborar más de uno.
-> - Un profesor puede diseñar varias prácticas, o ninguna.<
-> - Se guarda la fecha en que cada profesor participó en el diseño de la práctica. Si participa en fechas distintas.
+> - **Exámenes teóricos**. Se definen por un identificador único, un título, el número de preguntas y la fecha de realización, que es la misma para todos los alumnos que hacen el mismo examen. Cada alumno realiza varios exámenes (al menos uno) y hay que guardar la nota de cada alumno en cada examen. Puede haber exámenes creados que todavía no ha realizado ningún alumno.
+> - **Prácticas**. Se realiza un número indeterminado de prácticas durante el curso. Se definen por un identificador, un título y el grado de dificultad (Baja, Media o Alta). Los alumnos pueden examinarse de cualquier práctica cuando lo deseen, como mucho una vez cada una, y se guarda la fecha y la nota obtenida. Un alumno puede no haber hecho ninguna práctica, y puede haber prácticas que nadie ha hecho aún.
+> - De los profesores se guarda un identificador, NIF, nombre y apellidos. Interesa saber qué profesor o profesores han participado en el diseño de una práctica. En el diseño de una práctica colabora al menos un profesor, y puede colaborar más de uno. Un profesor puede diseñar varias prácticas, o ninguna.Se guarda la fecha en que cada profesor participó en el diseño de la práctica. Si participa en fechas distintas.
 
-Entrega: realizar el diagrama entidad-relación con Dia y subirlo al repositorio Git de la asignatura. Hay que subir el fichero .dia y también una exportación en .png, en el que aparezca vuestro nombre.
+**Entrega**: realizar el diagrama entidad-relación con Dia y subirlo al repositorio Git de la asignatura. Hay que subir el fichero .dia y también una exportación en .png, en el que aparezca vuestro nombre.
