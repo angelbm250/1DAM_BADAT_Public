@@ -85,7 +85,7 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 
 ### Ejercicio 8 - Instituto
 
->A partir del siguiente enunciado diseñar el modelo entidad-relación de una base de datos d eun instituto:
+> A partir del siguiente enunciado diseñar el modelo entidad-relación de una base de datos de un instituto:
 >
 > - De cada profesor se guarda el DNI, nombre, dirección y teléfono.
 > - De cada curso se guarda un código y un nombre (por ejemplo, 1º DAM). Un curso tiene varias asignaturas, y cada asignatura pertenece a un único curso.
@@ -95,16 +95,34 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > - Cada alumno está matriculado en una o varias asignaturas, y cada asignatura tiene al menos un alumno matriculado.
 > - En cada curso (por ejemplo, 1º DAM) los alumnos eligen un delegado, que es otro alumno. Interesa saber quién es el delegado de cada alumno. Un alumno puede ser delegado de varios compañeros o de ninguno. Cada alumno tiene como mucho un delegado, y los propios delegados no tienen delegado.
 
-
 ---
 
-### Ejercicio 9 -Feria del libro
+### Ejercicio 9 - Feria del libro
 
 > Realiza el esquema Entidad / Interrelación de acuerdo a las siguientes características:
 >
-> - Se necesita almacenar la información de cada caseta participante en la feria del libro. > - Una caseta se identifica por un número y representa a una editorial o librería. Además se almacenará también los metros cuadrados.
+> - Se necesita almacenar la información de cada caseta participante en la feria del libro. 
+> - Una caseta se identifica por un número y representa a una editorial o librería. Además se almacenará también los metros cuadrados.
 > - Las casetas exponen libros y un libro puede estar expuesto en varias casetas.Toda caseta expone al menos un libro y todo libro está expuesto en alguna caseta
 > - De cada libro se necesita saber su ISBN (único), título y año de publicación. También es interesante conocer de cada libro el número de ejemplares de los que dispone cada caseta y el precio de venta.
 > - También es útil saber los datos de los escritores. De los escritores se almacenará u nombre completo único, un seudónimo si lo tuviera, su fecha de nacimiento y lugar donde nació.
 > - Un libro puede no ser escrito por nadie o está escrito por un solo escritor, y un escritor puede escribir más de un libro.
 > - Las casetas contratarán a los escritores más importantes del momento (para la firma de sus libros a los visitantes), teniendo en cuenta que una caseta puede contratar a varios escritores. Interesará conocer la fecha y hora en la que los escritores han sido contratados por las casetas para la firma de sus libros
+
+---
+
+### Ejercicio 10 - Pruebas del módulo de Bases de Datos
+
+> - Los profesores del módulo de Bases de Datos deciden crear una base de datos que contenga la información de los resultados de las pruebas realizadas por los alumnos.
+>
+> - De los alumnos se guarda un identificador único, NIF, nombre, apellidos, fecha de nacimiento y el grupo al que asisten a clase. Se guarda también un teléfono de contacto, opcional (hay alumnos que no lo han facilitado). Interesa además conocer la edad de cada alumno, que se calcula a partir de su fecha de nacimiento.
+> - Los alumnos realizan dos tipos de pruebas a lo largo del curso:
+> - Exámenes teóricos. Se definen por un identificador único, un título, el número de preguntas y la fecha de realización, que es la misma para todos los alumnos que hacen el mismo examen. Cada alumno realiza varios exámenes (al menos uno) y hay que guardar la nota de cada alumno en cada examen. Puede haber exámenes creados que todavía no ha realizado ningún alumno.
+> - Prácticas. Se realiza un número indeterminado de prácticas durante el curso. Se definen por un identificador, un título y el grado de dificultad (Baja, Media o Alta). Los alumnos pueden examinarse de cualquier práctica cuando lo deseen, como mucho una vez cada una, y se guarda la fecha y la nota obtenida. Un alumno puede no haber hecho ninguna práctica, y puede haber prácticas que nadie ha hecho aún.
+> - De los profesores se guarda un identificador, NIF, nombre y apellidos.
+> - Interesa saber qué profesor o profesores han participado en el diseño de una práctica.
+> - En el diseño de una práctica colabora al menos un profesor, y puede colaborar más de uno.
+> - Un profesor puede diseñar varias prácticas, o ninguna.<
+> - Se guarda la fecha en que cada profesor participó en el diseño de la práctica. Si participa en fechas distintas.
+
+Entrega: realizar el diagrama entidad-relación con Dia y subirlo al repositorio Git de la asignatura. Hay que subir el fichero .dia y también una exportación en .png, en el que aparezca vuestro nombre.
