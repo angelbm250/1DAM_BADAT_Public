@@ -219,25 +219,21 @@ Indica cuántas veces puede participar una entidad en una relación, es decir, e
 
 La cardinalidad se coloca entre paréntesis sobre el rombo:
 
-```
-┌────────┐   (M:N)   ◇─────────◇   (M:N)   ┌────────┐
-│ LIBRO  │───────────│ESCRIBE  │───────────│ AUTOR  │
-└────────┘           ◇─────────◇           └────────┘
-```
+![alt text](img/fig12.png)
 
-### 7.3. Cardinalidad de entidades
+### 7.3. Participación de las entidades
 
-Concepto propio del **modelo E/R extendido** (Tema 5), pero conviene ir familiarizándose con él desde ahora. Se diferencia entre:
+Se diferencia entre:
 
-- **Cardinalidad mínima** — nº mínimo de relaciones en las que participa una ocurrencia de la entidad. Vale **0** (opcional) o **1** (obligatoria).
-- **Cardinalidad máxima** — nº máximo de relaciones en las que puede participar. Vale **1** o **N**.
+- **Participación mínima** — nº mínimo de relaciones en las que participa una ocurrencia de la entidad. Vale **0** (opcional) o **1** (obligatoria).
+- **Participación máxima** — nº máximo de relaciones en las que puede participar. Vale **1** o **N**.
 
 Se indica como `(mínima, máxima)` junto a cada entidad:
 
 ```
-┌────────┐  (0,N)      ◇─────────◇      (1,N)  ┌────────┐
-│ LIBRO  │─────────────│ ESCRIBE │──────────────│ AUTOR  │
-└────────┘             ◇─────────◇              └────────┘
+┌────────┐  (1,N)      ◇─────────◇      (0,N)  ┌────────┐
+│ LIBRO  │─────────────│ ESCRIBE  │─────────────│ AUTOR  │
+└────────┘             ◇─────────◇             └────────┘
 ```
 
 *Lectura:* cada libro puede tener entre 0 autores (libro anónimo) y N autores. Cada autor ha escrito como mínimo 1 libro y como máximo N.

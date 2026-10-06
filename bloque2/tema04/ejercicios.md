@@ -79,3 +79,23 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > - **(Reflexiva)**: Un tutor coordina a varios tutores(como mínimo a uno) y un tutor es coordinado por otro tutor.
 > - El proyecto MENTOR, además tiene en cuenta que ha de facilitar a los alumnos el acceso a Internet y por lo tanto ha instalado aulas con todos los servicios necesarios para el pleno desarrollo de los cursos. Cada alumno pertenece únicamente a un aula, pueden haber aulas vacías sin alumnos asignados.
 > - El mantenimiento de las aulas se lleva a cabo por los administradores de aula. Cada aula tiene asignado un código único, un nombre y dirección. La información que se necesita de cada administrador es su DNI, nombre completo, dirección de correo electrónico (si tiene). Cada aula es administrada por un único administrador y estos pueden administrar varias aulas o ninguna.
+
+---
+
+
+### Ejercicio 8 - Instituto
+
+>A partir del siguiente enunciado diseñar el modelo entidad-relación de una base de datos d eun instituto:
+>
+> - De cada profesor se guarda el DNI, nombre, dirección y teléfono.
+> -De cada curso se guarda un código y un nombre (por ejemplo, 1º DAM). Un curso tiene varias asignaturas, y cada asignatura pertenece a un único curso.
+> - Los profesores imparten asignaturas. De cada asignatura se guarda un código y un nombre.
+> - Un profesor puede impartir varias asignaturas, y puede haber profesores sin ninguna asignatura asignada todavía. Toda asignatura es impartido por un único profesor.
+> - De cada alumno se guarda el número de expediente, nombre, apellidos y fecha de nacimiento.
+> - Cada alumno está matriculado en una o varias asignaturas, y cada asignatura tiene al menos un alumno matriculado.
+> - En cada curso (por ejemplo, 1º DAM) los alumnos eligen un delegado, que es otro alumno. Interesa saber quién es el delegado de cada alumno. Un alumno puede ser delegado de varios compañeros o de ninguno. Cada alumno tiene como mucho un delegado, y los propios delegados no tienen delegado.
+
+
+---
+
+
