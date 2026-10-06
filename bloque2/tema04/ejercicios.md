@@ -88,7 +88,7 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 >A partir del siguiente enunciado diseñar el modelo entidad-relación de una base de datos d eun instituto:
 >
 > - De cada profesor se guarda el DNI, nombre, dirección y teléfono.
-> -De cada curso se guarda un código y un nombre (por ejemplo, 1º DAM). Un curso tiene varias asignaturas, y cada asignatura pertenece a un único curso.
+> - De cada curso se guarda un código y un nombre (por ejemplo, 1º DAM). Un curso tiene varias asignaturas, y cada asignatura pertenece a un único curso.
 > - Los profesores imparten asignaturas. De cada asignatura se guarda un código y un nombre.
 > - Un profesor puede impartir varias asignaturas, y puede haber profesores sin ninguna asignatura asignada todavía. Toda asignatura es impartido por un único profesor.
 > - De cada alumno se guarda el número de expediente, nombre, apellidos y fecha de nacimiento.
@@ -100,7 +100,7 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 
 ### Ejercicio 9 -Feria del libro
 
->Realiza el esquema Entidad / Interrelación de acuerdo a las siguientes características:
+> Realiza el esquema Entidad / Interrelación de acuerdo a las siguientes características:
 >
 > - Se necesita almacenar la información de cada caseta participante en la feria del libro. > - Una caseta se identifica por un número y representa a una editorial o librería. Además se almacenará también los metros cuadrados.
 > - Las casetas exponen libros y un libro puede estar expuesto en varias casetas.Toda caseta expone al menos un libro y todo libro está expuesto en alguna caseta
