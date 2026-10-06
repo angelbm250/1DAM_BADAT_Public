@@ -102,10 +102,9 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 
 >Realiza el esquema Entidad / Interrelación de acuerdo a las siguientes características:
 >
-> - Se necesita almacenar la información de cada caseta participante en la feria del libro. > - Una caseta se identifica por un número y representa a una editorial o librería. Además >se almacenará también los metros cuadrados.
-> - Las casetas exponen libros y un libro puede estar expuesto en varias casetas.
-> - De cada libro se necesita saber su ISBN (único), título y año de publicación. También es > interesante conocer de cada libro el número de ejemplares de los que dispone cada caseta y > el precio de venta.
-> - También es útil saber los datos de los escritores. De los escritores se almacenará un >nombre completo único, un seudónimo si lo tuviera, su fecha de nacimiento y lugar donde >nació.
-> - Un libro puede no ser escrito por nadie o está escrito por un solo escritor, y un >escritor puede escribir más de un libro.
-> - Las casetas contratarán a los escritores más importantes del momento (para la firma de 
-> sus libros a los visitantes), teniendo en cuenta que una caseta puede contratar a varios escritores. Interesará conocer la fecha y hora en la que los escritores han sido contratados por las casetas para la firma de sus libros
+> - Se necesita almacenar la información de cada caseta participante en la feria del libro. > - Una caseta se identifica por un número y representa a una editorial o librería. Además se almacenará también los metros cuadrados.
+> - Las casetas exponen libros y un libro puede estar expuesto en varias casetas.Toda caseta expone al menos un libro y todo libro está expuesto en alguna caseta
+> - De cada libro se necesita saber su ISBN (único), título y año de publicación. También es interesante conocer de cada libro el número de ejemplares de los que dispone cada caseta y el precio de venta.
+> - También es útil saber los datos de los escritores. De los escritores se almacenará u nombre completo único, un seudónimo si lo tuviera, su fecha de nacimiento y lugar donde nació.
+> - Un libro puede no ser escrito por nadie o está escrito por un solo escritor, y un escritor puede escribir más de un libro.
+> - Las casetas contratarán a los escritores más importantes del momento (para la firma de sus libros a los visitantes), teniendo en cuenta que una caseta puede contratar a varios escritores. Interesará conocer la fecha y hora en la que los escritores han sido contratados por las casetas para la firma de sus libros
