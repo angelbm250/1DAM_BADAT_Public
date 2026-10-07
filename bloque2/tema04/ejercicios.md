@@ -82,7 +82,6 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 
 ---
 
-
 ### Ejercicio 8 - Instituto
 
 > A partir del siguiente enunciado diseñar el modelo entidad-relación de una base de datos de un instituto:
@@ -105,7 +104,7 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > - Una caseta se identifica por un número y representa a una editorial o librería. Además se almacenará también los metros cuadrados.
 > - Las casetas exponen libros y un libro puede estar expuesto en varias casetas.Toda caseta expone al menos un libro y todo libro está expuesto en alguna caseta
 > - De cada libro se necesita saber su ISBN (único), título y año de publicación. También es interesante conocer de cada libro el número de ejemplares de los que dispone cada caseta y el precio de venta.
-> - También es útil saber los datos de los escritores. De los escritores se almacenará u nombre completo único, un seudónimo si lo tuviera, su fecha de nacimiento y lugar donde nació.
+> - También es útil saber los datos de los escritores. De los escritores se almacenará un nombre completo único, un seudónimo si lo tuviera, su fecha de nacimiento y lugar donde nació.
 > - Un libro puede no ser escrito por nadie o está escrito por un solo escritor, y un escritor puede escribir más de un libro.
 > - Las casetas contratarán a los escritores más importantes del momento (para la firma de sus libros a los visitantes), teniendo en cuenta que una caseta puede contratar a varios escritores. Interesará conocer la fecha y hora en la que los escritores han sido contratados por las casetas para la firma de sus libros
 
@@ -122,3 +121,61 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > - De los profesores se guarda un identificador, NIF, nombre y apellidos. Interesa saber qué profesor o profesores han participado en el diseño de una práctica. En el diseño de una práctica colabora al menos un profesor, y puede colaborar más de uno. Un profesor puede diseñar varias prácticas, o ninguna.Se guarda la fecha en que cada profesor participó en el diseño de la práctica. Si participa en fechas distintas.
 
 **Entrega**: realizar el diagrama entidad-relación con Dia y subirlo al repositorio Git de la asignatura. Hay que subir el fichero .dia y también una exportación en .png, en el que aparezca vuestro nombre.
+
+---
+
+### Ejercicio 11 - Centro de salud (versión binaria)
+
+> Un centro de salud quiere gestionar la información de sus médicos, pacientes y medicamentos.
+>
+> - De cada **médico** se guarda el número de colegiado, nombre y especialidad.
+> - De cada **paciente** se guarda el DNI, nombre y fecha de nacimiento.
+> - De cada **medicamento** se guarda un código y un nombre.
+> - Cada paciente tiene asignado **un único médico de cabecera**, y es obligatorio que lo tenga. Un médico puede ser el médico de cabecera de muchos pacientes, o de ninguno todavía.
+> - Un médico receta habitualmente varios medicamentos, o ninguno todavía. Un mismo medicamento puede ser recetado habitualmente por varios médicos, o por ninguno.
+> - Interesa saber qué **medicamentos toma actualmente** cada paciente (varios o ninguno) y qué pacientes toman cada medicamento.
+> 
+> **Pregunta**: Con los datos de este modelo, ¿podrías saber quién le recetó por ejemplo el ibuprofeno a Ana?. **No**. El modelo sabe que Ana toma ibuprofeno y que el Dr. Ruiz suele recetarlo, pero no que se lo recetó él. Cada relación se lee sola; ninguna une a las tres entidades.
+
+---
+
+### Ejercicio 12 - Centro de salud (versión ternaria)
+
+> Es el mismo centro de salud del ejercicio anterior, con las mismas entidades (médico, paciente y medicamento) y los mismos datos de cada una. Se mantiene el **médico de cabecera** (un único médico por paciente, obligatorio).
+>
+> Ahora, en lugar las recetas habituales de los médicos y de los medicamentos que toma cada paciente, el centro necesita registrar **las recetas**:
+>
+> - Cada receta indica **qué médico receta qué medicamento a qué paciente**, y la **fecha** en que se emite.
+> - Para un paciente y un medicamento concretos solo hay **un único médico** que lo receta. 
+> - Un médico puede recetar el mismo medicamento a muchos pacientes
+> - Un médico puede recetar a un mismo paciente varios medicamentos distintos.
+> - Puede haber médicos que aún no han recetado nada, pacientes sin recetas y medicamentos que nunca se han recetado.
+>
+> Por ejemplo, hoy el centro tiene estas recetas:
+>
+> | Médico | Medicamento | Paciente | Fecha |
+> |---|---|---|---|
+> | Dra. López | Ibuprofeno | Ana | 03/10 |
+> | Dr. Ruiz | Paracetamol | Ana | 05/10 |
+> | Dr. Ruiz | Ibuprofeno | Luis | 05/10 |
+
+> | Par | Qué fijas | Qué cuentas | Ejemplo con los datos | Resultado |
+> |---|---|---|---|---|
+> | **(0,1)** junto a `MÉDICO` | un paciente y un medicamento: *Ana + ibuprofeno* | cuántos médicos | solo López. No puede haber dos. Y > si Ana nunca ha recibido ibuprofeno, ninguno | de 0 a **1** |
+> | **(0,N)** junto a `PACIENTE` | un médico y un medicamento: *Ruiz + ibuprofeno* | cuántos pacientes | Luis, y podrían ser más | de 0 > a **N** |
+> | **(0,N)** junto a `MEDICAMENTO` | un médico y un paciente: *Ruiz + Ana* | cuántos medicamentos | paracetamol, y podría haber más | 
+> de 0 a **N** |
+
+
+---
+
+### 13 - Hoteles y habitaciones
+
+> Una cadena hotelera quiere guardar información de sus hoteles y habitaciones.
+>
+> - De cada hotel se guarda un código (único), nombre, ciudad y categoría (número de estrellas).
+> - De cada habitación se guarda el número de habitación, la planta y el tipo (individual, doble o suite).
+> - Los números de habitación se repiten entre hoteles: por ejemplo, todos los hoteles tienen una habitación 101. Dentro de un mismo hotel, el número es único.
+> - Toda habitación pertenece a un único hotel y no tiene sentido sin él: si se elimina un hotel, desaparecen sus habitaciones ovbiamente. Todo hotel tiene al menos una habitación.
+> - De cada cliente se guarda el DNI, nombre y teléfono. Un cliente se aloja en una o varias habitaciones (solo se registran clientes que se han alojado alguna vez), y en una habitación se pueden haber alojado varios clientes, o ninguno todavía. De cada estancia se guarda la fecha de entrada y la fecha de salida. Si un cliente se aloja varias veces en la misma habitación, solo se guarda la última estancia.
+> - De cada empleado de limpieza se guarda el DNI, nombre y turno (mañana o tarde). Cada habitación tiene asignado un único empleado de limpieza, y cada empleado tiene asignada al menos una habitación. Solo hace falta saber quien tiene asignada ahor ala habitación.
