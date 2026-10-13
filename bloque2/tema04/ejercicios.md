@@ -191,3 +191,28 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > - De cada serie se guarda un código, título y año de estreno. Una serie puede pertenecer a varios géneros (por ejemplo, drama y thriller). Interesa conocer el número de episodios de cada serie, que se calcula contando sus episodios.
 > - Cada serie tiene uno o varios episodios, numerados (1, 2, 3…) dentro de la serie. De cada episodio se guarda el título y la duración en minutos. Un episodio no tiene sentido sin su serie, y el episodio número 1 existe en todas las series.
 Los usuarios valoran series con una puntuación del 1 al 5. Un usuario puede valorar varias series o ninguna, y una serie puede tener varias valoraciones o ninguna. Un usuario valora cada serie como mucho una vez.
+
+---
+
+### 15 -  Empresa de material informático
+
+> Tenemos que diseñar una base de datos para una empresa de material informático, de la que tenemos esta información:
+
+> - Un equipo consta de varios componentes. Pueden ser necesarios varios componentes del mismo tipo para montar un equipo, por lo que será necesario almacenar la cantidad de componentes que se necesitan en cada equipo.
+
+> - Un cliente puede comprar equipos completos o componentes sueltos. Habrá que almacenar la cantidad de equipos o la cantidad de componentes de cada tipo que compra cada cliente. También habrá que guardar la fecha de la compra. Tenga en cuenta que un mismo cliente puede comprar el mismo equipo o el mismo componente en diferentes fechas. El diseño de la base de datos debe permitir almacenar un histórico con todas las fechas y las cantidades de equipos o componentes que ha comprado.
+
+> - Cada equipo está etiquetado con un identificador de equipo, una descripción, un precio y el stock disponible.
+
+> - Cada componente está etiquetado con un identificador de componente, una descripción, un precio y el stock disponible.
+
+> - Los datos que almacenamos los clientes son el NIF, nombre, apellidos, domicilio, localidad, provincia y teléfono.
+
+> - Los datos que almacenamos de los empleados son el NIF, nombre, apellidos y la sección donde trabaja.
+
+> - Una sección se identifica por un id y un nombre de sección. Considera que un empleado trabaja en una única sección.
+
+> - En cada compra realizada por un cliente interviene un empleado y será necesario guardar qué empleado es el que ha atendido a cada cliente para cada una de las compras.
+> 1. Para un cliente y un equipo, ¿cuántos empleados? Mínimo 1, máximo N, porque pudo comprar ese equipo en varias fechas con empleados distintos. → (1:N) junto a Empleado
+> 2. Para un cliente y un empleado, ¿cuántos equipos? Mínimo 1, máximo N, porque ese empleado le pudo vender varios equipos distintos. → (1:N) junto a Equipo
+> 3. Para un equipo y un empleado, ¿cuántos clientes? Mínimo 1, máximo N, porque ese empleado pudo vender ese equipo a muchos clientes. → (1:N) junto a Cliente
