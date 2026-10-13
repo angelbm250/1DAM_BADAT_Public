@@ -163,9 +163,7 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > |---|---|---|---|---|
 > | **(0,1)** junto a `MÉDICO` | un paciente y un medicamento: *Ana + ibuprofeno* | cuántos médicos | solo López. No puede haber dos. Y > si Ana nunca ha recibido ibuprofeno, ninguno | de 0 a **1** |
 > | **(0,N)** junto a `PACIENTE` | un médico y un medicamento: *Ruiz + ibuprofeno* | cuántos pacientes | Luis, y podrían ser más | de 0 > a **N** |
-> | **(0,N)** junto a `MEDICAMENTO` | un médico y un paciente: *Ruiz + Ana* | cuántos medicamentos | paracetamol, y podría haber más | 
-> de 0 a **N** |
-
+> | **(0,N)** junto a `MEDICAMENTO` | un médico y un paciente: *Ruiz + Ana* | cuántos medicamentos | paracetamol, y podría haber más | de 0 a **N** |
 
 ---
 
@@ -179,3 +177,17 @@ Para cada atributo, indica de qué tipo es (identificador, descriptivo, derivado
 > - Toda habitación pertenece a un único hotel y no tiene sentido sin él: si se elimina un hotel, desaparecen sus habitaciones ovbiamente. Todo hotel tiene al menos una habitación.
 > - De cada cliente se guarda el DNI, nombre y teléfono. Un cliente se aloja en una o varias habitaciones (solo se registran clientes que se han alojado alguna vez), y en una habitación se pueden haber alojado varios clientes, o ninguno todavía. De cada estancia se guarda la fecha de entrada y la fecha de salida. Si un cliente se aloja varias veces en la misma habitación, solo se guarda la última estancia.
 > - De cada empleado de limpieza se guarda el DNI, nombre y turno (mañana o tarde). Cada habitación tiene asignado un único empleado de limpieza, y cada empleado tiene asignada al menos una habitación. Solo hace falta saber quien tiene asignada ahor ala habitación.
+
+
+---
+
+### 14 - Plataforma de series
+
+> Se quiere diseñar la base de datos de una plataforma de series.
+>
+> - De cada usuario se guarda un código, nombre, email y fecha de nacimiento. Interesa conocer la edad de cada usuario, que se calcula a partir de su fecha de nacimiento.
+> - Un usuario puede haber sido invitado por otro usuario (como mucho por uno), y un usuario puede invitar a varios usuarios o a ninguno. Los primeros usuarios de la plataforma no fueron invitados por nadie.
+> - Un usuario puede tener registrada una tarjeta de pago (número y fecha de caducidad). > - Una tarjeta pertenece a un único usuario, y hay usuarios que no tienen tarjeta porque usan la prueba gratuita.
+> - De cada serie se guarda un código, título y año de estreno. Una serie puede pertenecer a varios géneros (por ejemplo, drama y thriller). Interesa conocer el número de episodios de cada serie, que se calcula contando sus episodios.
+> - Cada serie tiene uno o varios episodios, numerados (1, 2, 3…) dentro de la serie. De cada episodio se guarda el título y la duración en minutos. Un episodio no tiene sentido sin su serie, y el episodio número 1 existe en todas las series.
+Los usuarios valoran series con una puntuación del 1 al 5. Un usuario puede valorar varias series o ninguna, y una serie puede tener varias valoraciones o ninguna. Un usuario valora cada serie como mucho una vez.
