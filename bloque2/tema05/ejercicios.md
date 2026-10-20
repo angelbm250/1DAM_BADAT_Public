@@ -58,28 +58,28 @@ Para cada uno de los siguientes casos, identifica qué tipo de restricción sobr
 ## Ejercicio 5 — StreamWorld
 
 > La empresa StreamWorld desea diseñar una base de datos para gestionar los usuarios y los contenidos audiovisuales que ofrece en su plataforma en línea.
-
-### Usuarios
-
-- De cada usuario se desea almacenar un identificador único, su nombre, primer apellido, segundo apellido (opcional), correo electrónico y contraseña.
-- Los usuarios pueden ser únicamente **Free** o **Premium**.
-- Los usuarios Free no disponen de información adicional, mientras que de los usuarios Premium se desea almacenar además su teléfono de contacto y la fecha de renovación de la suscripción.
-
-### Visualizaciones
-
-- Los usuarios pueden visualizar vídeos en la plataforma. Un usuario puede ver varios vídeos, y un vídeo puede ser visto por varios usuarios.
-- De cada visualización se almacenará la fecha y hora en que se realizó la reproducción de cada usuario.
-
-### Vídeos
-
-- En el sistema se almacenan vídeos, de los cuales se guarda un identificador único, título, sinopsis, imagen, duración y un enlace o archivo de vídeo.
-- Los vídeos pueden ser de dos tipos: **Películas** y **Episodios**.
-- De las películas se desea almacenar su puntuación en IMDb y el nombre del director.
-- De los episodios se desea almacenar el número del episodio y la temporada a la que pertenece.
-- Cada episodio está asociado a una única serie, mientras que una serie puede tener varios episodios.
-- De cada serie se desea registrar un identificador único y un nombre.
-
-### Géneros
-
-- Cada vídeo (película o episodio) puede clasificarse en uno o varios géneros (por ejemplo: acción, comedia, drama, ciencia ficción, etc.).
-- De cada género se almacenará un identificador único y un nombre. Un vídeo puede pertenecer a varios géneros y un mismo género puede aplicarse a varios vídeos.
+>
+> ### Usuarios
+>
+>- De cada usuario se desea almacenar un identificador único, su nombre, primer apellido, segundo apellido (opcional), correo electrónico y contraseña.
+>- Los usuarios pueden ser únicamente **Free** o **Premium**.
+>- Los usuarios Free no disponen de información adicional, mientras que de los usuarios Premium se desea almacenar además su teléfono de contacto y la fecha de renovación de la suscripción.
+>
+>### Visualizaciones
+>
+>- Los usuarios pueden visualizar vídeos en la plataforma. Un usuario puede ver varios vídeos, y un vídeo puede ser visto por varios usuarios.
+>- De cada visualización se almacenará la fecha y hora en que se realizó la reproducción de cada usuario.
+>
+>### Vídeos
+>
+>- En el sistema se almacenan vídeos, de los cuales se guarda un identificador único, título, sinopsis, imagen, duración y un enlace o archivo de vídeo.
+>- Los vídeos pueden ser de dos tipos: **Películas** y **Episodios**.
+>- De las películas se desea almacenar su puntuación en IMDb y el nombre del director.
+>- De los episodios se desea almacenar el número del episodio y la temporada a la que pertenece.
+>- Cada episodio está asociado a una única serie, mientras que una serie puede tener varios episodios.
+>- De cada serie se desea registrar un identificador único y un nombre.
+>
+>### Géneros
+>
+>- Cada vídeo (película o episodio) puede clasificarse en uno o varios géneros (por ejemplo: acción, comedia, drama, ciencia ficción, etc.).
+>- De cada género se almacenará un identificador único y un nombre. Un vídeo puede pertenecer a varios géneros y un mismo género puede aplicarse a varios vídeos.
