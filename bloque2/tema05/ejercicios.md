@@ -83,3 +83,25 @@ Para cada uno de los siguientes casos, identifica qué tipo de restricción sobr
 >
 >- Cada vídeo (película o episodio) puede clasificarse en uno o varios géneros (por ejemplo: acción, comedia, drama, ciencia ficción, etc.).
 >- De cada género se almacenará un identificador único y un nombre. Un vídeo puede pertenecer a varios géneros y un mismo género puede aplicarse a varios vídeos.
+
+
+---
+
+## Ejercicio 6 — Instituto: profesores, módulos, alumnos y grupos
+
+> Un instituto desea implementar una base de datos para gestionar la información de sus profesores, módulos, alumnos y grupos. A continuación se describen los requisitos necesarios para el diseño de esta base de datos.
+
+
+- La base de datos debe almacenar el DNI, nombre, dirección y teléfono de cada profesor.
+- Los profesores pueden **impartir** o **recibir** uno o varios módulos.
+- Cada módulo está asignado exclusivamente para que lo imparta un profesor, y lo pueden recibir varios profesores.
+- Hemos de modelar que, para que un profesor pueda impartir un módulo concreto, previamente lo ha tenido que recibir.
+
+- Cada módulo tiene un código único y un nombre, y tiene alumnos matriculados.
+- Un alumno puede estar matriculado en varios módulos, pero un módulo tiene como mínimo un alumno inscrito.
+
+
+- De cada alumno se guarda el número de expediente, nombre, apellidos, fecha de nacimiento y edad (que se calculará a través de la fecha de nacimiento).
+- Además, cada alumno tiene un correo electrónico que se utiliza para recibir comunicaciones del instituto.
+- La base de datos debe registrar una relación en la que algunos alumnos actúan como **responsable** de otros alumnos (por ejemplo, en programas de ayuda entre alumnos de distintos niveles).
+- Un alumno puede actuar como responsable de varios alumnos (puede no tener alumnos a cargo), y cada alumno puede tener un único alumno responsable o ninguno.
