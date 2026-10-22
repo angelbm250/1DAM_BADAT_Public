@@ -135,3 +135,29 @@ Para cada uno de los siguientes casos, identifica qué tipo de restricción sobr
 > - La base de datos contiene información sobre las piezas (código de pieza, precio por unidad, fabricante y una descripción).
 > - Es necesario guardar también el número de unidades que se necesita de una determinada pieza en cada reparación de un vehículo.
 > - En una reparación se pueden usar diferentes piezas, y el mismo código de pieza se puede usar en varias reparaciones.
+
+---
+
+## Ejercicio 8 — Proyectos de investigación
+
+> El departamento de Informática de la Universidad de Jaén desea diseñar una base de datos para gestionar los profesores que participan en los proyectos de investigación.
+>
+> ### Proyectos
+>
+> - De cada proyecto de investigación se desea almacenar un identificador único, nombre, presupuesto total, el programa de I+D que lo financia, fecha de inicio, fecha de finalización y una descripción.
+> - En los proyectos de investigación trabajan profesores del departamento durante un periodo de tiempo, determinado por una fecha de inicio y una fecha de fin. Tenga en cuenta que un mismo profesor puede trabajar en el mismo proyecto de investigación en diferentes épocas.
+> - Un profesor puede trabajar en varios proyectos a la vez, y en un proyecto pueden trabajar varios profesores.
+>
+> ### Profesores
+>
+> - De cada profesor se desea almacenar un identificador único, nombre, apellidos, despacho y teléfono.
+> - Los profesores del departamento pueden ser **doctores** o **no doctores**.
+> - Un profesor no doctor debe ser supervisado por un profesor doctor. El tiempo de supervisión viene determinado por una fecha de inicio y una fecha de fin. Deberemos almacenar los profesores doctores que han supervisado a un profesor no doctor y durante qué periodos lo han sido.
+> - Los profesores doctores coordinan los proyectos. Un proyecto es coordinado por un único doctor, y un doctor puede coordinar varios proyectos.
+>
+> ### Publicaciones
+>
+> - Los profesores, doctores y no doctores, escriben publicaciones. Una publicación consta de un código único y un título.
+> - Una publicación puede ser de dos tipos: en una **revista** o en un **congreso**.
+> - Si la publicación es en una revista, se almacenará también su propio identificador de revista (`id_revista`), el volumen, el número, la página de inicio y la página de fin.
+> - Si la publicación es en un congreso, se almacenará también el tipo de congreso, ciudad, país, fecha de inicio, fecha de fin y editorial.
