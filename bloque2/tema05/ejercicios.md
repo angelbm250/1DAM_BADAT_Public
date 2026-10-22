@@ -90,18 +90,48 @@ Para cada uno de los siguientes casos, identifica qué tipo de restricción sobr
 ## Ejercicio 6 — Instituto: profesores, módulos, alumnos y grupos
 
 > Un instituto desea implementar una base de datos para gestionar la información de sus profesores, módulos, alumnos y grupos. A continuación se describen los requisitos necesarios para el diseño de esta base de datos.
+>
+>- La base de datos debe almacenar el DNI, nombre, dirección y teléfono de cada profesor.
+>- Los profesores pueden **impartir** o **recibir** uno o varios módulos.
+>- Cada módulo está asignado exclusivamente para que lo imparta un profesor, y lo pueden recibir varios profesores.
+>- Hemos de modelar que, para que un profesor pueda impartir un módulo concreto, previamente lo ha tenido que recibir.
+>
+>- Cada módulo tiene un código único y un nombre, y tiene alumnos matriculados.
+>- Un alumno puede estar matriculado en varios módulos, pero un módulo tiene como mínimo un alumno inscrito.
+>
+>- De cada alumno se guarda el número de expediente, nombre, apellidos, fecha de nacimiento y edad (que se calculará a través de la fecha de nacimiento).
+>- Además, cada alumno tiene un correo electrónico que se utiliza para recibir comunicaciones del instituto.
+>- La base de datos debe registrar una relación en la que algunos alumnos actúan como **responsable** de otros alumnos (por ejemplo, en programas de ayuda entre alumnos de distintos niveles).
+>- Un alumno puede actuar como responsable de varios alumnos (puede no tener alumnos a cargo), y cada alumno puede tener un único alumno responsable o ninguno.
 
+---
 
-- La base de datos debe almacenar el DNI, nombre, dirección y teléfono de cada profesor.
-- Los profesores pueden **impartir** o **recibir** uno o varios módulos.
-- Cada módulo está asignado exclusivamente para que lo imparta un profesor, y lo pueden recibir varios profesores.
-- Hemos de modelar que, para que un profesor pueda impartir un módulo concreto, previamente lo ha tenido que recibir.
+## Ejercicio 7 — Taller de mecánica
 
-- Cada módulo tiene un código único y un nombre, y tiene alumnos matriculados.
-- Un alumno puede estar matriculado en varios módulos, pero un módulo tiene como mínimo un alumno inscrito.
-
-
-- De cada alumno se guarda el número de expediente, nombre, apellidos, fecha de nacimiento y edad (que se calculará a través de la fecha de nacimiento).
-- Además, cada alumno tiene un correo electrónico que se utiliza para recibir comunicaciones del instituto.
-- La base de datos debe registrar una relación en la que algunos alumnos actúan como **responsable** de otros alumnos (por ejemplo, en programas de ayuda entre alumnos de distintos niveles).
-- Un alumno puede actuar como responsable de varios alumnos (puede no tener alumnos a cargo), y cada alumno puede tener un único alumno responsable o ninguno.
+> Un taller de mecánica de automóviles desea tener una base de datos para llevar la gestión de las reparaciones de vehículos, de los clientes y empleados del taller, así como de las piezas que se utilizan en las reparaciones que se llevan a cabo en el taller. Los supuestos semánticos que deben recogerse en el esquema E/R se describen a continuación:
+>
+> ### Empleados
+>
+> - En el taller existen varios empleados de los que se quiere guardar su DNI, nombre, dirección, teléfono de contacto y fecha de incorporación al taller.
+> - Estos empleados pueden ser únicamente de dos tipos: **mecánicos**, de los que se quiere conocer su especialidad (por ejemplo, motores de inyección, carburadores, etc.), y **aprendices**.
+> - Un aprendiz es supervisado en su trabajo por un mecánico, y un mecánico puede supervisar a varios aprendices (aunque puede ser que haya mecánicos que no supervisen a ningún aprendiz).
+> - Tanto los mecánicos como los aprendices participan en las reparaciones de vehículos que se realizan en el taller.
+>
+> ### Reparaciones
+>
+> - Cada reparación se caracteriza por un código de reparación, una fecha de inicio, una fecha de fin (opcional, ya que hay reparaciones en curso), una descripción del trabajo realizado, así como una duración en horas.
+> - Una reparación corresponde a un único vehículo, y un vehículo puede haber sufrido varias reparaciones, es decir, un vehículo puede haber pasado por el taller en diversas ocasiones.
+> - Interesa recoger las horas que un determinado empleado trabaja en cada reparación que tiene asignada. Un empleado puede trabajar en varias reparaciones, y en una reparación puede haber varios empleados trabajando.
+>
+> ### Vehículos y clientes
+>
+> - De los vehículos que entran en el taller se guarda su matrícula, marca, modelo y color, así como la compañía en la que está asegurado junto con su correspondiente número de póliza (no es necesario crear una entidad de compañías de seguros).
+> - También se guarda información sobre los clientes (NIF, nombre, dirección y teléfono de contacto).
+> - Un vehículo pertenece a un único cliente del taller, y un cliente puede tener varios vehículos.
+>
+> ### Piezas
+>
+> - Puede ocurrir que una reparación requiera una o varias piezas para sustituir las dañadas.
+> - La base de datos contiene información sobre las piezas (código de pieza, precio por unidad, fabricante y una descripción).
+> - Es necesario guardar también el número de unidades que se necesita de una determinada pieza en cada reparación de un vehículo.
+> - En una reparación se pueden usar diferentes piezas, y el mismo código de pieza se puede usar en varias reparaciones.
