@@ -4,6 +4,7 @@
 ---
 
 Para cada diagrama E/R, transforma el esquema a un **esquema relacional**. Indica para cada tabla su **clave primaria (PK)** y sus **claves foráneas (FK)**, y razona qué cardinalidad tiene cada relación.
+
 ---
 
 ## Ejercicio 1 — Proveedores y piezas
