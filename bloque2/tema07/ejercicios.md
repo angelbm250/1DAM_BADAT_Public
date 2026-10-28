@@ -16,7 +16,7 @@ Transformación de un esquema E-R a un esquema relacional
 
 ---
 
-## Ejercicio 2
+## Ejercicio 2 - Clientes-productos-proveedores
 
 ![Enunciado ejercicio 2](img/ejercicio2.png)
 
