@@ -20,3 +20,9 @@ Transformación de un esquema E-R a un esquema relacional
 
 ![Enunciado ejercicio 2](img/ejercicio2.png)
 
+
+---
+
+## Ejercicio 3 - Mentor
+
+![Enunciado ejercicio 3](img/ejercicio3.png)
